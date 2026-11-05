@@ -1,0 +1,8 @@
+oh_modules/
+.hvigor/
+build/
+local.properties
+*.hap
+*.app
+.idea/
+*-check.log

@@ -1,0 +1,21 @@
+{
+  "module": {
+    "name": "entry", "type": "entry", "mainElement": "EntryAbility",
+    "deviceTypes": ["phone", "tablet", "2in1"], "deliveryWithInstall": true, "installationFree": false,
+    "pages": "$profile:main_pages",
+    "abilities": [{ "name": "EntryAbility", "srcEntry": "./ets/entryability/EntryAbility.ets", "label": "$string:app_name", "icon": "$media:app_icon", "startWindowIcon": "$media:app_icon", "startWindowBackground": "$color:start_window_background", "exported": true,
+      "launchType": "singleton", "backgroundModes": ["dataTransfer"],
+      "skills": [{ "entities": ["entity.system.home"], "actions": ["ohos.want.action.home"] }] }],
+    "extensionAbilities": [{
+      "name": "QuickShareExtension", "srcEntry": "./ets/entryability/QuickShareExtension.ets", "type": "share", "exported": true,
+      "label": "$string:app_name", "icon": "$media:app_icon",
+      "skills": [{ "actions": ["ohos.want.action.sendData"], "uris": [
+          { "scheme": "file", "utd": "general.file", "maxFileSupported": 20 },
+          { "scheme": "file", "utd": "general.image", "maxFileSupported": 20 },
+          { "scheme": "file", "utd": "general.video", "maxFileSupported": 20 },
+          { "scheme": "file", "utd": "general.audio", "maxFileSupported": 20 }
+        ] }]
+    }],
+    "requestPermissions": [{"name":"ohos.permission.INTERNET"},{"name":"ohos.permission.GET_NETWORK_INFO"},{"name":"ohos.permission.KEEP_BACKGROUND_RUNNING"}]
+  }
+}

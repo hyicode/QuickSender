@@ -1,0 +1,4 @@
+{
+  "modelVersion": "6.0.0", "name": "quicksender", "version": "0.1.0", "description": "HarmonyOS LAN file transfer",
+  "dependencies": {}, "devDependencies": {}
+}
